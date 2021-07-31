@@ -1,5 +1,5 @@
 import React from 'react';
-
+//Basic card component
 const Card = ({id,name,email})=>{
     return(
         <div className="bg-light-green tc grow pointer br3 bw2 dib pa3 ma3 shadow-5">
