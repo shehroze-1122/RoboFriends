@@ -3,31 +3,42 @@ import CardArray from '../components/CardArray.js';
 import SearchBox from '../components/SearchBox.js';
 import Scroll from '../components/Scroll.js';
 import ErrorBoundary from '../components/ErrorBoundary';
+import { connect } from 'react-redux';
 import './App.css';
+import { setSearchField } from '../actions';
+
+
+const mapStateToProps=(state)=>{
+    return {searchValue:state.searchValue};
+}
+const mapDispatchToProps=(dispatch)=>{
+    return {searchEntry:(event)=>dispatch(setSearchField(event.target.value))};
+}
 
 class App extends Component{
     constructor(){
         super();
         this.state={
-            searchValue: '',
             robots: []
         }
     }
+
     componentDidMount(){
         fetch('https://jsonplaceholder.typicode.com/users')
         .then(response => response.json())
         .then(user => {
+            console.log(user)
             this.setState({robots:user});
         })
     }
-    searchEntry=(event)=>{
-        this.setState({ searchValue: event.target.value});
-    }
+
     render(){
-        const filteredRobots = this.state.robots.filter((robot)=>{
-            return robot.name.toLowerCase().includes(this.state.searchValue.toLowerCase());
+        const { robots } = this.state;
+        const { searchValue,searchEntry } = this.props;
+        const filteredRobots = robots.filter((robot)=>{
+            return robot.name.toLowerCase().includes(searchValue.toLowerCase());
         });
-        if(this.state.robots.length===0){
+        if(robots.length===0){
             return (<div className="center">
                         <h1>Loading...</h1>
                     </div>);
@@ -37,7 +48,7 @@ class App extends Component{
                 <React.Fragment>
                     <div className="tc">
                         <h1>RoboFriends</h1>
-                        <SearchBox searchChange={this.searchEntry}/>
+                        <SearchBox searchChange={searchEntry}/>
                         <Scroll>
                             <ErrorBoundary>
                                 <CardArray robots={filteredRobots}/>
@@ -49,4 +60,5 @@ class App extends Component{
         }
     }
 }
-export default App;
+
+export default connect(mapStateToProps,mapDispatchToProps)(App);
