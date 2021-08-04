@@ -3,12 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './containers/App.js';
 import reportWebVitals from './reportWebVitals';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
-import {changeSearchField} from './reducers.js'
+import  thunkMiddleware from 'redux-thunk';
+import {changeSearchField, assignRobots } from './reducers.js'
+// import { createLogger } from 'redux-logger';
 import 'tachyons'
 
-const store = createStore(changeSearchField);
+// const logger = createLogger();
+// pass logger to createStore if you wanna see it in action in console
+
+const root = combineReducers({changeSearchField, assignRobots})
+const store = createStore(root, applyMiddleware(thunkMiddleware));
 
 ReactDOM.render(
   <Provider store={store}>

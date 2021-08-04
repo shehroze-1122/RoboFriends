@@ -2,6 +2,10 @@ import React from 'react';
 import Card from './Card.js';
 
 const CardArray = ({robots})=>{
+
+    if(robots.length===0){
+        return (<p className="tc white mt-10">No result found</p>)
+    }
     return(
         <div>
             {
