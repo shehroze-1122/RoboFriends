@@ -6,6 +6,7 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import { connect } from 'react-redux';
 import './App.css';
 import { setSearchField, fetchRobots } from '../actions';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 
 const mapStateToProps=(state)=>{
@@ -36,7 +37,7 @@ class App extends Component{
         });
         if(isPending){
             return (<div className="center">
-                        <h1>Loading...</h1>
+                        <CircularProgress color="secondary" />
                     </div>);
         }
 
