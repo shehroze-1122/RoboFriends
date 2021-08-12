@@ -1,26 +1,24 @@
 {
   "files": {
     "main.css": "/RoboFriends-React-Redux/static/css/main.5e05b1ea.chunk.css",
-    "main.js": "/RoboFriends-React-Redux/static/js/main.fe612247.chunk.js",
-    "main.js.map": "/RoboFriends-React-Redux/static/js/main.fe612247.chunk.js.map",
-    "runtime-main.js": "/RoboFriends-React-Redux/static/js/runtime-main.0b9afee9.js",
-    "runtime-main.js.map": "/RoboFriends-React-Redux/static/js/runtime-main.0b9afee9.js.map",
+    "main.js": "/RoboFriends-React-Redux/static/js/main.522cee67.chunk.js",
+    "main.js.map": "/RoboFriends-React-Redux/static/js/main.522cee67.chunk.js.map",
+    "runtime-main.js": "/RoboFriends-React-Redux/static/js/runtime-main.1d178b4e.js",
+    "runtime-main.js.map": "/RoboFriends-React-Redux/static/js/runtime-main.1d178b4e.js.map",
     "static/css/2.6d7c7915.chunk.css": "/RoboFriends-React-Redux/static/css/2.6d7c7915.chunk.css",
-    "static/js/2.9477ed42.chunk.js": "/RoboFriends-React-Redux/static/js/2.9477ed42.chunk.js",
-    "static/js/2.9477ed42.chunk.js.map": "/RoboFriends-React-Redux/static/js/2.9477ed42.chunk.js.map",
-    "static/js/3.0722ab66.chunk.js": "/RoboFriends-React-Redux/static/js/3.0722ab66.chunk.js",
-    "static/js/3.0722ab66.chunk.js.map": "/RoboFriends-React-Redux/static/js/3.0722ab66.chunk.js.map",
+    "static/js/2.4676d1ab.chunk.js": "/RoboFriends-React-Redux/static/js/2.4676d1ab.chunk.js",
+    "static/js/2.4676d1ab.chunk.js.map": "/RoboFriends-React-Redux/static/js/2.4676d1ab.chunk.js.map",
     "index.html": "/RoboFriends-React-Redux/index.html",
     "static/css/2.6d7c7915.chunk.css.map": "/RoboFriends-React-Redux/static/css/2.6d7c7915.chunk.css.map",
     "static/css/main.5e05b1ea.chunk.css.map": "/RoboFriends-React-Redux/static/css/main.5e05b1ea.chunk.css.map",
-    "static/js/2.9477ed42.chunk.js.LICENSE.txt": "/RoboFriends-React-Redux/static/js/2.9477ed42.chunk.js.LICENSE.txt",
+    "static/js/2.4676d1ab.chunk.js.LICENSE.txt": "/RoboFriends-React-Redux/static/js/2.4676d1ab.chunk.js.LICENSE.txt",
     "static/media/App.css": "/RoboFriends-React-Redux/static/media/SEGA.47b4bfa9.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.0b9afee9.js",
+    "static/js/runtime-main.1d178b4e.js",
     "static/css/2.6d7c7915.chunk.css",
-    "static/js/2.9477ed42.chunk.js",
+    "static/js/2.4676d1ab.chunk.js",
     "static/css/main.5e05b1ea.chunk.css",
-    "static/js/main.fe612247.chunk.js"
+    "static/js/main.522cee67.chunk.js"
   ]
 }
