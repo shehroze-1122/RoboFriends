@@ -1,12 +1,16 @@
 import React from 'react';
 import Card from './Card.js';
+import { CircularProgress } from '@material-ui/core/index.js';
 
-const CardArray = ({robots})=>{
+const CardArray = ({robots, isPending, error})=>{
+    if(error !== ''){
+        return (<p className="tc white mt-10">Couldn't connect to the server. Please check your internet connection </p>)
+    }
 
-    if(robots.length===0){
+    else if(!isPending & robots.length===0){
         return (<p className="tc white mt-10">No result found</p>)
     }
-    return(
+    return isPending? (<div className="center"> <CircularProgress color="secondary" /></div>):(
         <div>
             {
                 robots.map((user)=>{

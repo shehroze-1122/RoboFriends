@@ -6,7 +6,6 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import { connect } from 'react-redux';
 import './App.css';
 import { setSearchField, fetchRobots } from '../actions';
-import CircularProgress from '@material-ui/core/CircularProgress';
 
 
 const mapStateToProps=(state)=>{
@@ -31,31 +30,25 @@ class App extends Component{
     }
 
     render(){
-        const { searchValue,searchEntry, robots, isPending } = this.props;
+        const { searchValue,searchEntry, robots, isPending, error } = this.props;
         const filteredRobots = robots.filter((robot)=>{
             return robot.name.toLowerCase().includes(searchValue.toLowerCase());
         });
-        if(isPending){
-            return (<div className="center">
-                        <CircularProgress color="secondary" />
-                    </div>);
-        }
 
-        else{
-            return(
-                <React.Fragment>
-                    <div className="tc">
-                        <h1>RoboFriends</h1>
-                        <SearchBox searchChange={searchEntry}/>
-                        <Scroll>
-                            <ErrorBoundary>
-                                <CardArray robots={filteredRobots}/>
-                            </ErrorBoundary>
-                        </Scroll>
-                    </div>   
-                </React.Fragment>
-            );
-        }
+        return(
+            <React.Fragment>
+                <div className="tc">
+                    <h1>RoboFriends</h1>
+                    <SearchBox searchChange={searchEntry}/>
+                    <Scroll>
+                        <ErrorBoundary>
+                            <CardArray robots={filteredRobots} isPending={isPending} error={error} />
+                        </ErrorBoundary>
+                    </Scroll>
+                </div>   
+            </React.Fragment>
+        );
+        
     }
     
 }
