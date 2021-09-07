@@ -8,9 +8,9 @@ It has a cool UI consisting of robots fetched using [RoboHash](https://robohash.
 
 ## Images
 
-![home]()
+![home](https://github.com/shehroze-1122/RoboFriends-React-Redux/blob/main/Readme%20Images/home.PNG)
 
-![search]()
+![search](https://github.com/shehroze-1122/RoboFriends-React-Redux/blob/main/Readme%20Images/search.PNG)
 
 ### Making it your own
 If you want to play around with the code and run on your local server:
