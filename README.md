@@ -6,6 +6,12 @@ The updated version however which uses hooks can be seen [here](https://github.c
 
 It has a cool UI consisting of robots fetched using [RoboHash](https://robohash.org/) API and dummy users and emails fetched from [JSON placeholder](https://jsonplaceholder.typicode.com/) Fake Free API.
 
+## Images
+
+![home]()
+
+![search]()
+
 ### Making it your own
 If you want to play around with the code and run on your local server:
 
