@@ -7,9 +7,10 @@ The updated version however which uses hooks can be seen [here](https://github.c
 It has a cool UI consisting of robots fetched using [RoboHash](https://robohash.org/) API and dummy users and emails fetched from [JSON placeholder](https://jsonplaceholder.typicode.com/) Fake Free API.
 
 ## Images
-
+- Home Screen
 ![home](https://github.com/shehroze-1122/RoboFriends-React-Redux/blob/main/Readme%20Images/home.PNG)
 
+- Seacrhing Robots
 ![search](https://github.com/shehroze-1122/RoboFriends-React-Redux/blob/main/Readme%20Images/search.PNG)
 
 ### Making it your own
